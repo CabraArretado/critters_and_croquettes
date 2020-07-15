@@ -12,45 +12,51 @@ from datetime import date
 # self.slithering = True
 # self.walking = True
 
+
 class Llama:
-    def __init__(self, name, species):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
         self.date_added = date.today()
         self.walking = True
-ted = Llama("Ted", "Llama")
+        self.shift = shift
+ted = Llama("Ted", "Llama", "afternoon")
 
 class Wolf:
-    def __init__(self, name, species):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
         self.date_added = date.today()
         self.walking = True
-joe = Wolf("Joe", "Wolf")
+        self.shift = shift
+joe = Wolf("Joe", "Wolf", "morning")
 
 class Bear:
-    def __init__(self, name, species):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
         self.date_added = date.today()
         self.walking = True
-xi = Bear("Xi", "Bear")
+        self.shift = shift
+xi = Bear("Xi", "Bear", "afternoon")
 
 class Kangooro:
-    def __init__(self, name, species):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
         self.date_added = date.today()
         self.walking = True
-jumpie = Kangooro("Jumpie", "Kangooro")
+        self.shift = shift
+jumpie = Kangooro("Jumpie", "Kangooro", "afternoon")
 
 class Pig:
-    def __init__(self, name, species):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
         self.date_added = date.today()
         self.walking = True
-frajola = Pig('Frajola', "Pig")
+        self.shift = shift
+frajola = Pig('Frajola', "Pig", "morning")
 
 class Snake:
     def __init__(self, name, species):
@@ -132,4 +138,3 @@ class Fish:
         self.species = species
         self.date_added = date.today()
         self.swimming = True
-seaking = Fish("Seaking", "Fish")

@@ -21,6 +21,11 @@ class Llama:
         self.walking = True
         self.shift = shift
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 ted = Llama("Ted", "Llama", "afternoon", "Llama Food")
 
 class Wolf:
@@ -31,6 +36,11 @@ class Wolf:
         self.walking = True
         self.shift = shift
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
+        
 joe = Wolf("Joe", "Wolf", "morning", "Wolf food")
 
 class Bear:
@@ -41,6 +51,10 @@ class Bear:
         self.walking = True
         self.shift = shift
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 xi = Bear("Xi", "Bear", "afternoon", "bear Food")
 
 class Kangooro:
@@ -51,6 +65,10 @@ class Kangooro:
         self.walking = True
         self.shift = shift
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 jumpie = Kangooro("Jumpie", "Kangooro", "afternoon", "Straw")
 
 class Pig:
@@ -61,6 +79,10 @@ class Pig:
         self.walking = True
         self.shift = shift
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 frajola = Pig('Frajola', "Pig", "morning", "Pig Food")
 
 class Snake:
@@ -70,6 +92,10 @@ class Snake:
         self.date_added = date.today()
         self.slithering = True
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 penelope = Snake("Penelope", "Snake", "Live Mouses")
 
 class Kobra:
@@ -79,6 +105,10 @@ class Kobra:
         self.date_added = date.today()
         self.slithering = True
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 jonathan = Kobra("Jonathan", "Kobra", "Live Mouses")
 
 
@@ -89,6 +119,10 @@ class Salamander:
         self.date_added = date.today()
         self.slithering = True
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 piupiu = Salamander("Piupiu", "Salamander", "Salamander Food")
 
 
@@ -99,6 +133,10 @@ class Crocodile:
         self.date_added = date.today()
         self.slithering = True
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 jeferson = Crocodile("Jeferson", "Crocodile", "Alive Sheep")
 
 class Aligator:
@@ -108,6 +146,10 @@ class Aligator:
         self.date_added = date.today()
         self.slithering = True
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 bob = Aligator("Bob", "Aligator", "Live Aligator")
 
 class Crabby:
@@ -117,6 +159,10 @@ class Crabby:
         self.date_added = date.today()
         self.swimming = True
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 krabby = Crabby("Krabby", "Crabby", "Crabby Food")
 
 class Seahorse:
@@ -126,6 +172,10 @@ class Seahorse:
         self.date_added = date.today()
         self.swimming = True
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 rapidash = Seahorse("Rapidash", "Seahorse", "Seahorse Food")
 
 class Squid:
@@ -135,6 +185,10 @@ class Squid:
         self.date_added = date.today()
         self.swimming = True
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 jujuba = Squid("Jujuba", "Squid", "squid Food")
 
 class Jellyfish:
@@ -144,6 +198,10 @@ class Jellyfish:
         self.date_added = date.today()
         self.swimming = True
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 pikachu =   Jellyfish("Pikachu", "Jellyfish", "Jellyfish Food")
 
 class Fish:
@@ -153,4 +211,8 @@ class Fish:
         self.date_added = date.today()
         self.swimming = True
         self.food = food
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 seaking = Fish("Seaking", "Fish", "Fish Food")

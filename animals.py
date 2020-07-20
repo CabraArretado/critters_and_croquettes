@@ -16,7 +16,7 @@ class PettingZoo:
         self.animals = list()
 
     def add_animals(self, *animals):
-        self.animals.extend([animals])
+        self.animals.extend(list(animals))
 
 class SnakePit:
     def __init__(self, attraction_name, description):
@@ -25,7 +25,11 @@ class SnakePit:
         self.animals = list()
         
     def add_animals(self, *animals):
-        self.animals.extend([animals])
+        self.animals.extend(list(animals))
+
+    @property
+    def last_critter_added(self):
+        print(f"{self.animals[-1].name} the {self.animals[-1].species}")
 
 class Wetlands:
     def __init__(self, attraction_name, description):
@@ -34,7 +38,7 @@ class Wetlands:
         self.animals = list()
         
     def add_animals(self, *animals):
-        self.animals.extend([animals])
+        self.animals.extend(list(animals))
 
 
 
@@ -47,11 +51,12 @@ class Llama:
         self.walking = True
         self.shift = shift
         self.food = food
+
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-    # def __str__(self):
-    #     return f"{self.name} is a {self.species}"
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 ted = Llama("Ted", "Llama", "afternoon", "Llama Food")
 
 class Wolf:
@@ -231,17 +236,24 @@ class Jellyfish:
 pikachu =   Jellyfish("Pikachu", "Jellyfish", "Jellyfish Food")
 
 class Fish:
-    def __init__(self, name, species, food):
+    def __init__(self, name, species, food, chip_num):
         self.name = name
         self.species = species
         self.date_added = date.today()
         self.swimming = True
         self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-seaking = Fish("Seaking", "Fish", "Fish Food")
+        self.__chip_num = chip_num
+
+    @property
+    def chip_num(self):
+        return self.__chip_num
+
+    @chip_num.setter
+    def chip_num(self):
+        pass
+
+
+seaking = Fish("Seaking", "Fish", "Fish Food", 121212)
 
 # Creating Places
 village = PettingZoo("The Village", "Cozy place to todlers interact with animals")
@@ -252,9 +264,10 @@ village.add_animals(joe, ted, xi, jumpie, frajola)
 hole.add_animals(penelope, jonathan, piupiu, jeferson, bob)
 lake.add_animals(krabby, rapidash, jujuba, pikachu, seaking)
 
-print(village.animals)
-for place in [village, hole, lake]:
-    print(f"{place.attraction_name}: {place.description}")
-    for x in place.animals:
-        for animal in x:
-            print(f'You can find {animal.name} the {animal.species} in {place.attraction_name}')
+# for place in [village, hole, lake]:
+#     print(f"{place.attraction_name}: {place.description}")
+#     for x in place.animals:
+#         for animal in x:
+#             print(f'You can find {animal.name} the {animal.species} in {place.attraction_name}')
+
+hole.last_critter_added

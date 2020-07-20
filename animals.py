@@ -1,18 +1,44 @@
 from datetime import date
 
-# the petting area, such as donkeys, llamas, and goats
-# the glass tank, like copperheads and rat snakes
-# the pond, like mallards and goldfish
+# Define custom types for the three different animal attractions at Critters and Croquettes -- PettingZoo, SnakePit, and Wetlands
+# Give them each properties of attraction_name, description and animals
+# attraction_name and description should be set when a habitat is instantiated, so be sure to have your __init__ method take a arguments for setting those values
+# Give animals an ititial value of an empty list
+# Define a method on each class for adding animals to its animals array. Note that we did not do that in the example above. so, don't just copy and paste PettingZoo
+# Once you have instances of your animals and attractions created, assign your critters to their appropriate attraction.
+# Output a report to the terminal that displays each attraction and its animals.
 
-# self.critters = "Petting area"
-# self.critters = "Petting area"
-# self.critters = "Petting area"
+# Atractions
+class PettingZoo:
+    def __init__(self, attraction_name, description):
+        self.attraction_name = attraction_name
+        self.description = description
+        self.animals = list()
 
-# self.swimming = True
-# self.slithering = True
-# self.walking = True
-# self.food = food
+    def add_animals(self, *animals):
+        self.animals.extend([animals])
 
+class SnakePit:
+    def __init__(self, attraction_name, description):
+        self.attraction_name = attraction_name
+        self.description = description
+        self.animals = list()
+        
+    def add_animals(self, *animals):
+        self.animals.extend([animals])
+
+class Wetlands:
+    def __init__(self, attraction_name, description):
+        self.attraction_name = attraction_name
+        self.description = description
+        self.animals = list()
+        
+    def add_animals(self, *animals):
+        self.animals.extend([animals])
+
+
+
+## Animals
 class Llama:
     def __init__(self, name, species, shift, food):
         self.name = name
@@ -24,8 +50,8 @@ class Llama:
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
+    # def __str__(self):
+    #     return f"{self.name} is a {self.species}"
 ted = Llama("Ted", "Llama", "afternoon", "Llama Food")
 
 class Wolf:
@@ -216,3 +242,19 @@ class Fish:
     def __str__(self):
         return f"{self.name} is a {self.species}"
 seaking = Fish("Seaking", "Fish", "Fish Food")
+
+# Creating Places
+village = PettingZoo("The Village", "Cozy place to todlers interact with animals")
+hole = SnakePit("The Hole", "Where one can see the most dangerous snakes")
+lake = Wetlands("The Lake", "Giant aquarium with lots of creatures")
+
+village.add_animals(joe, ted, xi, jumpie, frajola)
+hole.add_animals(penelope, jonathan, piupiu, jeferson, bob)
+lake.add_animals(krabby, rapidash, jujuba, pikachu, seaking)
+
+print(village.animals)
+for place in [village, hole, lake]:
+    print(f"{place.attraction_name}: {place.description}")
+    for x in place.animals:
+        for animal in x:
+            print(f'You can find {animal.name} the {animal.species} in {place.attraction_name}')

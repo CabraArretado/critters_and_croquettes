@@ -1,14 +1,6 @@
 from datetime import date
 
-# Define custom types for the three different animal attractions at Critters and Croquettes -- PettingZoo, SnakePit, and Wetlands
-# Give them each properties of attraction_name, description and animals
-# attraction_name and description should be set when a habitat is instantiated, so be sure to have your __init__ method take a arguments for setting those values
-# Give animals an ititial value of an empty list
-# Define a method on each class for adding animals to its animals array. Note that we did not do that in the example above. so, don't just copy and paste PettingZoo
-# Once you have instances of your animals and attractions created, assign your critters to their appropriate attraction.
-# Output a report to the terminal that displays each attraction and its animals.
-
-# Atractions
+### Atractions
 class PettingZoo:
     def __init__(self, attraction_name, description):
         self.attraction_name = attraction_name
@@ -42,207 +34,20 @@ class Wetlands:
 
 
 
-## Animals
-class Llama:
-    def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.walking = True
-        self.shift = shift
-        self.food = food
+### Animals
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+class Animal:
 
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-ted = Llama("Ted", "Llama", "afternoon", "Llama Food")
-
-class Wolf:
-    def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.walking = True
-        self.shift = shift
-        self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-        
-joe = Wolf("Joe", "Wolf", "morning", "Wolf food")
-
-class Bear:
-    def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.walking = True
-        self.shift = shift
-        self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-xi = Bear("Xi", "Bear", "afternoon", "bear Food")
-
-class Kangooro:
-    def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.walking = True
-        self.shift = shift
-        self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-jumpie = Kangooro("Jumpie", "Kangooro", "afternoon", "Straw")
-
-class Pig:
-    def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.walking = True
-        self.shift = shift
-        self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-frajola = Pig('Frajola', "Pig", "morning", "Pig Food")
-
-class Snake:
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.slithering = True
-        self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-penelope = Snake("Penelope", "Snake", "Live Mouses")
-
-class Kobra:
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.slithering = True
-        self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-jonathan = Kobra("Jonathan", "Kobra", "Live Mouses")
-
-
-class Salamander:
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.slithering = True
-        self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-piupiu = Salamander("Piupiu", "Salamander", "Salamander Food")
-
-
-class Crocodile:
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.slithering = True
-        self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-jeferson = Crocodile("Jeferson", "Crocodile", "Alive Sheep")
-
-class Aligator:
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.slithering = True
-        self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-bob = Aligator("Bob", "Aligator", "Live Aligator")
-
-class Crabby:
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.swimming = True
-        self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-krabby = Crabby("Krabby", "Crabby", "Crabby Food")
-
-class Seahorse:
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.swimming = True
-        self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-rapidash = Seahorse("Rapidash", "Seahorse", "Seahorse Food")
-
-class Squid:
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.swimming = True
-        self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-jujuba = Squid("Jujuba", "Squid", "squid Food")
-
-class Jellyfish:
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.swimming = True
-        self.food = food
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    def __str__(self):
-        return f"{self.name} is a {self.species}"
-pikachu =   Jellyfish("Pikachu", "Jellyfish", "Jellyfish Food")
-
-class Fish:
     def __init__(self, name, species, food, chip_num):
         self.name = name
         self.species = species
         self.date_added = date.today()
-        self.swimming = True
         self.food = food
         self.__chip_num = chip_num
+
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        
 
     @property
     def chip_num(self):
@@ -252,8 +57,114 @@ class Fish:
     def chip_num(self):
         pass
 
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
 
-seaking = Fish("Seaking", "Fish", "Fish Food", 121212)
+class Llama(Animal):
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.shift = shift
+        self.walking = True
+
+    def feed(self):
+        print(f'on {date.today()}, {self.name} had "Rockytop" sung to it so it would eat its {self.food}')
+
+ted = Llama("Ted", "Llama", "afternoon", "Llama Food", 1)
+print(ted)
+ted.feed()
+
+class Wolf(Animal):
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.shift = shift
+        self.walking = True
+        
+joe = Wolf("Joe", "Wolf", "morning", "Wolf food", 2)
+
+class Bear(Animal):
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.shift = shift
+        self.walking = True
+xi = Bear("Xi", "Bear", "afternoon", "Bear Food", 3)
+
+class Kangooro(Animal):
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.shift = shift
+        self.walking = True
+jumpie = Kangooro("Jumpie", "Kangooro", "afternoon", "Straw", 4)
+
+class Pig(Animal):
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.shift = shift
+        self.walking = True
+frajola = Pig('Frajola', "Pig", "morning", "Pig Food", 5)
+
+class Snake(Animal):
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.slithering = True
+
+penelope = Snake("Penelope", "Snake", "Live Mouses", 6)
+
+class Kobra(Animal):
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.slithering = True
+jonathan = Kobra("Jonathan", "Kobra", "Live Mouses", 7)
+
+
+class Salamander(Animal):
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.slithering = True
+piupiu = Salamander("Piupiu", "Salamander", "Salamander Food", 8)
+
+
+class Crocodile(Animal):
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.slithering = True
+jeferson = Crocodile("Jeferson", "Crocodile", "Alive Sheep", 9)
+
+class Aligator(Animal):
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.slithering = True
+bob = Aligator("Bob", "Aligator", "Live Aligator", 10)
+
+class Crabby(Animal):
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.swimming = True
+
+krabby = Crabby("Krabby", "Crabby", "Crabby Food", 11)
+
+class Seahorse(Animal):
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.swimming = True
+rapidash = Seahorse("Rapidash", "Seahorse", "Seahorse Food", 12)
+
+class Squid(Animal):
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.swimming = True
+jujuba = Squid("Jujuba", "Squid", "squid Food", 13)
+
+class Jellyfish(Animal):
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.swimming = True
+pikachu =   Jellyfish("Pikachu", "Jellyfish", "Jellyfish Food", 14)
+
+class Fish(Animal):
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.swimming = True
+seaking = Fish("Seaking", "Fish", "Fish Food", 15)
 
 # Creating Places
 village = PettingZoo("The Village", "Cozy place to todlers interact with animals")
@@ -264,10 +175,3 @@ village.add_animals(joe, ted, xi, jumpie, frajola)
 hole.add_animals(penelope, jonathan, piupiu, jeferson, bob)
 lake.add_animals(krabby, rapidash, jujuba, pikachu, seaking)
 
-# for place in [village, hole, lake]:
-#     print(f"{place.attraction_name}: {place.description}")
-#     for x in place.animals:
-#         for animal in x:
-#             print(f'You can find {animal.name} the {animal.species} in {place.attraction_name}')
-
-hole.last_critter_added
